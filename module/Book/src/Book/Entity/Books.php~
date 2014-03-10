@@ -1,0 +1,53 @@
+<?php
+
+namespace Book\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Books
+ *
+ * @ORM\Table(name="books")
+ * @ORM\Entity
+ */
+class Books
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=100, nullable=false)
+     */
+    private $title;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="author", type="string", length=50, nullable=false)
+     */
+    private $author;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="publisher", type="string", length=100, nullable=true)
+     */
+    private $publisher;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="isbn", type="string", length=10, nullable=false)
+     */
+    private $isbn;
+
+
+}
